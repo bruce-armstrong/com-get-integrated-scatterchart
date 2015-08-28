@@ -31,9 +31,9 @@ function render($element, layout ) {
       data = qMatrix.map(function (d) {
         return {
           "Dim1": d[0].qText,
-          "Metric1": d[2].qNum,
-          "Metric2": d[3].qNum,
-          "Tooltip": d[1].qText
+          "Metric1": d[1].qNum,
+          "Metric2": d[2].qNum,
+          "Tooltip": d[3].qText
         }
       });
     }      
@@ -77,11 +77,11 @@ function createHypercube($scope,$element,app) {
   //Get the hypercube defined by the user
   $scope.backendApi.getProperties().then(function(reply){  
     var cubeDef = $.extend(true,{},reply.qHyperCubeDef) ;
-    if ( cubeDef.qDimensions.length == 1 ){
+    if ( cubeDef.qMeasures.length == 2 ){
       var tooltipDim = getTooltipDim($scope.layout);
       if ( tooltipDim != "" ){
           //Create another cube that adds the tooltip data 
-    	  cubeDef.qDimensions.push ({ qDef : { qFieldDefs : [ tooltipDim ] } });
+    	  cubeDef.qMeasures.push ({ qDef : { qDef : tooltipDim } });
     	  cubeDef.qInitialDataFetch[0].qWidth = 4 ;
           app.createCube(cubeDef, function (reply) {
               hyperCube = reply.qHyperCube;
