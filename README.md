@@ -5,7 +5,3 @@ This sample is based off the [Qlik Sense Extension with D3 tutorial](http://blog
 
 I've added a Tooltip section that allows the user to specify up to four items of information that will be used in a popup that appears when the mouse is moved over a datapoint.
 
-![](https://github.com/bruce-armstrong/com-get-integrated-scatterchart/blob/master/tooltip_panel.PNG)
-
-![](https://github.com/bruce-armstrong/com-get-integrated-scatterchart/blob/master/custom_tooltip.PNG)
-
