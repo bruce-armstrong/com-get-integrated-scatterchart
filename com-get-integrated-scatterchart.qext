@@ -1,0 +1,9 @@
+{
+	"name": "Scatter Plot with Customizable Tooltips",
+	"description": "A scatter plot with customizable popup tooltips",
+	"icon": "scatter-chart",
+	"type": "visualization",
+	"version": 0.1,
+	"preview": "com-get-integrated-scatterchart.png",
+	"author": "Bruce Armstrong - Integrated Data Services"
+}
