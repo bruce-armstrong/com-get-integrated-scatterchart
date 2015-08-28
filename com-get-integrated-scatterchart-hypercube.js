@@ -84,7 +84,6 @@ function createHypercube($scope,$element,app) {
     	  cubeDef.qDimensions.push ({ qDef : { qFieldDefs : [ tooltipDim ] } });
     	  cubeDef.qInitialDataFetch[0].qWidth = 4 ;
           app.createCube(cubeDef, function (reply) {
-              console.log('cube', reply);
               hyperCube = reply.qHyperCube;
               render($element, $scope.layout );
           });
